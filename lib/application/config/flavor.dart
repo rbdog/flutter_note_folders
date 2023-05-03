@@ -13,6 +13,7 @@ Flavor _readFlavor() {
   } else if (flavorString == 'prd') {
     return Flavor.prd;
   } else {
-    throw Exception('Flavorが不明です');
+    // 指定がないときは dev を使う
+    return Flavor.dev;
   }
 }
